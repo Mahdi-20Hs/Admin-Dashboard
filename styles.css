@@ -1,5 +1,5 @@
 *{
-  padding:0;
+  padding:0%;
   margin: 0%;
   box-sizing: border-box;
 }
@@ -15,7 +15,22 @@ body{
   background-color: skyblue;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr 3fr;
+  grid-template-rows: 1fr 2fr 2fr;
+  padding-left: 30px;
+}
+.sidebar-list-1, .sidebar-list-2{
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  gap: 20px;
+}
+.sidebar-head ,.sidebar-list-1 li, .sidebar-list-2 li{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  justify-items: start;
+
 }
 .header{
   grid-column: 2/-1;
