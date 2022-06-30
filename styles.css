@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 *{
   padding:0%;
   margin: 0%;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
 }
 body{
   height: 100vh;
@@ -14,24 +18,41 @@ body{
   grid-column: 1/2;
   background-color: skyblue;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 2fr;
-  padding-left: 30px;
+  justify-content: center;
+  grid-template-columns: 95%;
+  grid-template-rows: auto auto auto 3fr;
+  gap:50px;
 }
-.sidebar-list-1, .sidebar-list-2{
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  align-content: center;
-  gap: 20px;
-}
-.sidebar-head ,.sidebar-list-1 li, .sidebar-list-2 li{
+.sidebar-head, .sidebar-list-1 li, .sidebar-list-2 li{
   display: grid;
   grid-template-columns: 1fr 4fr;
   align-items: center;
-  justify-items: start;
-
 }
+.sidebar-head{
+  margin-top: 14px;
+}
+.sidebar-head h1{
+  font-size:1.7rem;
+  justify-self: start;
+}
+.sidebar-list-1, .sidebar-list-2{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+.sidebar-head img, .sidebar-list-1 img, .sidebar-list-2 img{
+  justify-self: center;
+}
+.sidebar-list-1 div, .sidebar-list-2 div{
+  justify-self: start;
+  font-weight: bold;
+}
+
+.sidebar-list-1 img, .sidebar-list-2 img{
+  width: 22px;
+  height: auto;
+}
+
 .header{
   grid-column: 2/-1;
   grid-row: 1/2;
