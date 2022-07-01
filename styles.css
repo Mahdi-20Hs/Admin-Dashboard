@@ -59,7 +59,8 @@ body{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 3fr;
-  padding: 20px;
+  padding: 10px 60px;
+  height: 150px;
 }
 .tools{
   display: grid;
@@ -76,6 +77,44 @@ body{
   border-radius: 12px;
   background-color: rgb(219, 217, 217);
   outline: none;
+}
+.account{
+  display: grid;
+  grid-template-columns: auto 1fr auto auto auto;
+  grid-template-rows: 1fr;
+  align-items: center;
+  gap: 20px;
+}
+.account-img{
+  width: 70px;
+  height: 70px;
+  background-image: url(./assets/photo_2022-06-26_12-17-17.jpg);
+  background-size: cover;
+  border-radius: 50%;
+}
+.account button{
+  border: none;
+  background-color: rgb(35, 154, 201);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+.account-info{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  
+  font-weight: bold;
+}
+.account-info h1{
+  font-size: 1.3rem;
+}
+.account-info h4{
+  font-size: 1rem;
 }
 .profile-img{
   width: 40px;
