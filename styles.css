@@ -24,7 +24,7 @@ body{
   background-color: #202020;
   display: grid;
   justify-content: center;
-  grid-template-columns: 95%;
+  grid-template-columns: 100%;
   grid-template-rows: auto auto auto 3fr;
   gap:50px;
   color: white;
@@ -50,22 +50,20 @@ body{
 .sidebar-list-1, .sidebar-list-2{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
+  gap: 0px;
 }
 .sidebar-list-1 li, .sidebar-list-2 li{
   display: grid;
   grid-template-columns: 1fr 4fr;
   align-items: center;
-}
-.sidebar-list-1 li, .sidebar-list-2 li{
-  padding: 5px 0;
-  border-radius: 15px;
+  padding: 10px 0;
   cursor: pointer;
   transition-duration: 0.2s;
 }
+
 .sidebar-list-1 li:hover, .sidebar-list-2 li:hover{
-  background-color: white;
-  color: #202020;
+  background-color: #313030;
+  border-left: 10px solid crimson;
 }
  .sidebar-list-1 img, .sidebar-list-2 img{
   justify-self: center;
