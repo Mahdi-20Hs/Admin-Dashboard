@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+
 *{
   padding:0%;
   margin: 0%;
@@ -14,34 +15,61 @@ body{
   grid-template-rows: 1fr 5fr;
 }
 .sidebar{
+  position: fixed;
+  top: 0%;
+  width: 20%;
+  height: 100%;
   grid-row: 1/-1;
   grid-column: 1/2;
-  background-color: skyblue;
+  background-color: #202020;
   display: grid;
   justify-content: center;
   grid-template-columns: 95%;
   grid-template-rows: auto auto auto 3fr;
   gap:50px;
+  color: white;
 }
-.sidebar-head, .sidebar-list-1 li, .sidebar-list-2 li{
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  align-items: center;
-}
+
 .sidebar-head{
-  margin-top: 14px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
 }
 .sidebar-head h1{
-  font-size:1.7rem;
-  justify-self: start;
+  font-size:2.2rem;
+  margin-left: 16.5px;
+}
+.sidebar-head img{
+  filter: invert(19%) sepia(98%) saturate(5974%) hue-rotate(342deg) brightness(96%) contrast(94%);
+  vertical-align:text-bottom;
+  margin-inline: -5px;
+  width: 45px;
+  height: auto;
 }
 .sidebar-list-1, .sidebar-list-2{
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
 }
-.sidebar-head img, .sidebar-list-1 img, .sidebar-list-2 img{
+.sidebar-list-1 li, .sidebar-list-2 li{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+}
+.sidebar-list-1 li, .sidebar-list-2 li{
+  padding: 5px 0;
+  border-radius: 15px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.sidebar-list-1 li:hover, .sidebar-list-2 li:hover{
+  background-color: white;
+  color: #202020;
+}
+ .sidebar-list-1 img, .sidebar-list-2 img{
   justify-self: center;
+  filter: invert(100%) sepia(99%) saturate(18%) hue-rotate(236deg) brightness(105%) contrast(100%);
 }
 .sidebar-list-1 div, .sidebar-list-2 div{
   justify-self: start;
@@ -55,7 +83,8 @@ body{
 .header{
   grid-column: 2/-1;
   grid-row: 1/2;
-  background-color: lightcoral;
+  background-color: white;
+  color: #0078ff;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 3fr;
@@ -66,9 +95,10 @@ body{
 .tools{
   display: grid;
   grid-template-columns: auto 3fr auto auto auto;
-  gap: 12px;
+  gap: 14px;
   align-items: center;
   font-weight: bold;
+  color: #202020;
 }
 .tools input{
   width: 80%;
@@ -76,8 +106,15 @@ body{
   padding: 10px;
   border: none;
   border-radius: 12px;
-  background-color: rgb(219, 217, 217);
+  background-color: #d6d6d6;
   outline: none;
+  color: #202020;
+}
+.tools img{
+  width: 25px;
+  height: auto;
+  filter: invert(0%) sepia(3%) saturate(341%) hue-rotate(339deg) brightness(98%) contrast(75%);
+  cursor: pointer;
 }
 .profile-img{
   width: 40px;
@@ -101,21 +138,28 @@ body{
   border-radius: 50%;
 }
 .account button{
-  border: none;
-  background-color: rgb(35, 154, 201);
-  color: white;
   padding: 8px 16px;
   border-radius: 20px;
   font-weight: bold;
   width: 90px;
   height: auto;
   cursor: pointer;
+  transition-duration: 0.2s;
+  background-color: white;
+  color: #202020;
+  border: 2px solid #202020;
+}
+.account button:hover{
+  border: 2px solid #202020;
+  background-color: #202020;
+  color: white;
 }
 .account-info{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   font-weight: bold;
+  color: #202020;
 }
 .account-info h1{
   font-size: 1.3rem;
@@ -127,13 +171,12 @@ body{
 .main-container{
   grid-column: 2/-1;
   grid-row: 2/-1;
-  background-color: lightcyan;
+  background-color: #d6d6d6;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1;
-  padding: 20px 15px;
-  gap: 10px;
-  background-color:rgb(223, 231, 243) ;
+  grid-template-rows: 1fr;
+  padding: 20px 22px;
+  gap: 16px;
 }
 .cards-container, .announcement, .trending{
   display: grid;
@@ -156,8 +199,13 @@ body{
 }
 
 .card{
+  /*make the border gradient and round at the same time*/
+  /* background-image: linear-gradient(white, white), 
+                    linear-gradient(to bottom, rgb(75, 4, 18), rgb(153, 8, 37));
+  background-origin: border-box;
+  background-clip: padding-box, border-box; */
   background-color: white;
-  border-left: 10px solid orange;
+  border-left: 10px solid crimson;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr;
@@ -169,6 +217,7 @@ body{
 }
 .card-content h3{
  font-size: 1rem;
+ margin-bottom: 2px;
 }
 .card-content p{
   font-size: 0.85rem;
@@ -181,6 +230,23 @@ body{
 }
 .action img{
   cursor: pointer;
+  width: 28px;
+  height: auto;
+  padding: 3px;
+  transition-duration: 0.1s;
+}
+.action .img-container{
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.1s;
+}
+.action img:hover{
+  filter: invert(100%) sepia(3%) saturate(0%) hue-rotate(165deg) brightness(103%) contrast(101%);
+}
+.action .img-container:hover{
+  background-color: #202020;
 }
 .annoucement-card{
   display: grid;
@@ -209,8 +275,8 @@ body{
   background-color: white;
   padding: 16px 0;
   border-radius: 10px;
-  justify-content: center;
-  gap: 10px;
+  justify-items: center;
+  align-items: center;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.171);
 }
 .trending-card > div{
